@@ -1,0 +1,15 @@
+.toy-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.toy-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0.5em;
+    padding: 1em;
+}

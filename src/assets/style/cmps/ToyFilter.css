@@ -1,0 +1,15 @@
+.toy-filter {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    background-color: var(--clr2bg);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+@media(max-width: 720px) {
+    .toy-filter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }

@@ -1,0 +1,17 @@
+.app-header {
+  gap: 2em;
+  background-color: var(--clr1bg);
+  color: lightgreen;
+  padding: 1em;
+}
+
+.app-header nav{
+  display: flex;
+  gap: 1em;
+}
+
+@media(max-width: 720px) {
+  .app-header {
+    color: var(--clr2bg);
+  }
+}
