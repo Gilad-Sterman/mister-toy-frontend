@@ -36,16 +36,14 @@ export function ToyIndex() {
 
     function onSetFilter(filterBy) {
         dispatch({ type: SET_FILTER_BY, filterBy })
-        console.log(filterBy)
+        // console.log(filterBy)
     }
 
     return (
         <section className="toy-index">
             <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-            <h1>toy index</h1>
-            {/* <button onClick={onAddToy}>Add Toy ⛐</button> */}
-            <button>
-                <Link to={`/toy/edit/`}>Add Toy ⛐</Link>
+            <button className='btn-add-toy'>
+                <Link to={`/toy/edit/`}>Add Toy ➕</Link>
             </button>
             <ToyList toys={toys} onRemoveToy={onRemoveToy} />
         </section>

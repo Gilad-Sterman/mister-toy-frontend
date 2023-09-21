@@ -1,15 +1,35 @@
-.toy-filter {
-    margin-top: 1em;
-    display: flex;
-    gap: 1em;
-    background-color: var(--clr2bg);
-    padding: 1em;
-    border-radius: 1em;
+.filter-container {
+  width: 100%;
 }
 
-@media(max-width: 720px) {
-    .toy-filter {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+.toy-filter {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--clr2bg);
+  padding: 1em;
+  border-radius: .5em;
+}
+
+.toy-filter input {
+  height: 2em;
+  padding-left: .5em;
+  border-radius: 1em;
+  background-color: var(--clr2bg-light);
+}
+
+.toy-filter select {
+  height: 2em;
+  padding-left: .5em;
+  border-radius: 1em;
+  background-color: var(--clr2bg-light);
+}
+
+/* @media(max-width: 720px) {
+  .toy-filter {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
+} */

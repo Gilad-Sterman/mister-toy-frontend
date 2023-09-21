@@ -1,18 +1,15 @@
-.toy-edit-add {
+.toy-details {
+    margin-top: 1em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
+    border: 1px solid var(--gray2);
+    border-radius: 1em;
 }
 
-.toy-edit-add form {
-    display: flex;
-    gap: .5em;
-    align-items: center;
-    padding: .5em;
-    height: 20vh;
-}
-
-.toy-edit-add a {
+.toy-details a {
     background-color: var(--clr2bg);
     padding: 0.5em;
     border-radius: 0.5em;

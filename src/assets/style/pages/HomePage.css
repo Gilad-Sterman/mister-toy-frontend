@@ -1,0 +1,16 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-to-catalog {
+    margin-top: 1em;
+    font-family: monospace;
+    width: max-content;
+}
+
+.btn-to-catalog:hover {
+    background-color: green;
+}

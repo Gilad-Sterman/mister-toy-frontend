@@ -8,11 +8,16 @@
     border-radius: 1em;
     background-color: var(--clr2bg-light);
 }
-.toy-preview h4{
+
+.toy-preview h4 {
     text-transform: capitalize;
     color: black;
 }
 
 .toy-preview img {
     max-width: 100px;
+}
+
+.toy-preview.not-stock {
+    background-color: rgb(97, 177, 115);
 }

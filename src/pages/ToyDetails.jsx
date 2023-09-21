@@ -30,6 +30,7 @@ export function ToyDetails() {
             <h1>{toy.name}</h1>
             <h5>Price: ${toy.price}</h5>
             <p>🧸</p>
+            <p className="labels">Labels: {toy.labels.map(label => <span key={label}>{label} | </span>)}</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptas cumque tempore, aperiam sed dolorum rem! Nemo quidem, placeat perferendis tempora aspernatur sit, explicabo veritatis corrupti perspiciatis repellat, enim quibusdam!</p>
             <Link to="/toy">Back</Link>
         </section>

@@ -1,0 +1,59 @@
+.toy-edit-add {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid var(--gray2);
+    border-radius: 1em;
+}
+
+.toy-edit-add form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: .5em;
+}
+
+.toy-edit-add form label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toy-edit-add form input {
+    margin-left: 1em;
+    height: 2rem;
+    padding-left: .5em;
+    border-radius: 1em;
+    background-color: var(--clr2bg-light);
+}
+
+.toy-edit-add form select {
+    height: 2rem;
+    padding-left: .5em;
+    border-radius: 1em;
+    background-color: var(--clr2bg-light);
+}
+
+.toy-edit-add a {
+    background-color: var(--clr2bg);
+    padding: 0.5rem;
+    border-radius: 0.5em;
+    width: max-content;
+}
+
+.toy-edit-add button {
+    background-color: var(--clr2bg);
+    padding: 0.5rem;
+    border-radius: 0.5em;
+    width: max-content;
+    align-self: center;
+}
+
+@media(max-width: 720px) {
+    .toy-edit-add form {
+        flex-direction: column;
+        gap: 1em;
+    }
+}

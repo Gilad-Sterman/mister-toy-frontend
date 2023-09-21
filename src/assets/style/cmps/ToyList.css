@@ -13,3 +13,7 @@
     margin: 0.5em;
     padding: 1em;
 }
+
+.btn-edit:hover {
+    background-color: var(--clr1bg);
+}

@@ -1,3 +1,6 @@
+import { MySelect } from "./MySelect"
+
+
 export function ToyFilter({ filterBy, onSetFilter }) {
 
     function setNewFilter({ target }) {
@@ -17,24 +20,23 @@ export function ToyFilter({ filterBy, onSetFilter }) {
     }
 
     return (
-        <section className="toy-filter">
-            <input type="text" name="txt" onInput={setNewFilter} />
-            <select name="labels" onChange={setNewFilter} >
-                <option value="onWheels">On wheels</option>
-                <option value="boxGame">Box game</option>
-                <option value="art">Art</option>
-                <option value="doll">Doll</option>
-            </select>
-            <select name="inStock" onChange={setNewFilter}>
-                <option value="all">All</option>
-                <option value="inStock">In stock</option>
-                <option value="notInStock">Not in stock</option>
-            </select>
-            <select name="sortBy" onChange={setNewFilter}>
-                <option value="name">Name</option>
-                <option value="price">Price</option>
-                <option value="createdAt">Date</option>
-            </select>
+        <section className="filter-container">
+            <section className="toy-filter">
+                <input type="text" name="txt" placeholder="Search 🔎" onInput={setNewFilter} />
+                <select name="inStock" onChange={setNewFilter}>
+                    <option value="all">All</option>
+                    <option value="inStock">In stock</option>
+                    <option value="notInStock">Not in stock</option>
+                </select>
+                <select name="sortBy" onChange={setNewFilter}>
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                    <option value="createdAt">Date</option>
+                </select>
+            </section>
+            <section className="toy-select">
+                <MySelect onSetFilter={onSetFilter} filterBy={filterBy} />
+            </section>
         </section>
     )
 }

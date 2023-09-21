@@ -11,6 +11,7 @@ import { HomePage } from './pages/HomePage'
 import { AppHeader } from './cmps/AppHeader'
 import { ToyDetails } from './pages/ToyDetails'
 import { ToyEdit } from './pages/ToyEdit'
+import { Dashboard } from './pages/Dashboard'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -27,6 +28,7 @@ function App() {
               <Route element={<ToyEdit />} path="/toy/edit/" />
               <Route element={<ToyEdit />} path="/toy/edit/:toyId" />
               <Route element={<ToyDetails />} path="/toy/:toyId" />
+              <Route element={<Dashboard />} path="/dashboard" />
             </Routes>
           </main>
         </section>
