@@ -17,3 +17,15 @@
 .btn-edit:hover {
     background-color: var(--clr1bg);
 }
+
+@media(max-width: 420px) {
+    .toy-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .toy-list li {
+        padding: .5em;
+        margin: 5px;
+    }
+}

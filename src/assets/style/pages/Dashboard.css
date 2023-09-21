@@ -1,15 +1,21 @@
 .dashboard {
+  margin: auto;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .charts {
+  place-self: start;
+  max-width: 30vw;
   display: flex;
+  gap: 3em;
 }
 
-@media(max-width: 720px) {
+/* @media(max-width: 720px) {
   .charts {
-    display: grid;
+    place-self: center;
   }
-}
+} */
