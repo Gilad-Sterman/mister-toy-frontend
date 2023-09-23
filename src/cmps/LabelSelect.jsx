@@ -22,7 +22,7 @@ const MenuProps = {
 const names = labels
 
 export function LabelSelect({ toy, setToy }) {
-    const [personName, setPersonName] = React.useState([]);
+    const [toyLabels, setPersonName] = React.useState(toy.labels);
 
     const handleChange = (event) => {
         const {
@@ -39,20 +39,20 @@ export function LabelSelect({ toy, setToy }) {
     return (
         <div>
             <FormControl sx={{ m: 1, width: 300 }}>
-                <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+                <InputLabel id="demo-multiple-checkbox-label">Labels</InputLabel>
                 <Select
                     labelId="demo-multiple-checkbox-label"
                     id="demo-multiple-checkbox"
                     multiple
-                    value={personName}
+                    value={toyLabels}
                     onChange={handleChange}
-                    input={<OutlinedInput label="Tag" />}
+                    input={<OutlinedInput label="Labels" />}
                     renderValue={(selected) => selected.join(', ')}
                     MenuProps={MenuProps}
                 >
                     {names.map((name) => (
                         <MenuItem key={name} value={name}>
-                            <Checkbox checked={personName.indexOf(name) > -1} />
+                            <Checkbox checked={toyLabels.indexOf(name) > -1} />
                             <ListItemText primary={name} />
                         </MenuItem>
                     ))}

@@ -51,6 +51,7 @@ export function ToyEdit() {
                 <label htmlFor="name">
                     Name:
                     <input
+                        placeholder="Name"
                         name="name"
                         id="name"
                         type="text"
@@ -67,7 +68,7 @@ export function ToyEdit() {
                         onChange={handleChange}
                     />
                 </label>
-                <select name="inStock" onChange={handleChange}>
+                <select name="inStock" onChange={handleChange} value={(toy.inStock) ? true : "false"}>
                     <option value={true}>In stock</option>
                     <option value="false">Not in stock</option>
                 </select>

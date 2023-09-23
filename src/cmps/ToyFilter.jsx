@@ -1,7 +1,16 @@
+import { useEffect, useRef, useState } from "react"
+import { utilService } from "../services/util.service"
 import { MySelect } from "./MySelect"
 
 
 export function ToyFilter({ filterBy, onSetFilter }) {
+    const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy })
+
+    onSetFilter = useRef(utilService.debounce(onSetFilter))
+
+    useEffect(() => {
+        onSetFilter.current(filterByToEdit)
+    }, [filterByToEdit])
 
     function setNewFilter({ target }) {
         const field = target.name
@@ -11,12 +20,12 @@ export function ToyFilter({ filterBy, onSetFilter }) {
             const newLabels = (filterBy.labels)
             newLabels.push(value)
             const newFilter = { ...filterBy, labels: newLabels }
-            onSetFilter(newFilter)
+            setFilterByToEdit(newFilter)
             return
         }
 
         const newFilter = { ...filterBy, [field]: value }
-        onSetFilter(newFilter)
+        setFilterByToEdit(newFilter)
     }
 
     return (
@@ -35,7 +44,7 @@ export function ToyFilter({ filterBy, onSetFilter }) {
                 </select>
             </section>
             <section className="toy-select">
-                <MySelect onSetFilter={onSetFilter} filterBy={filterBy} />
+                <MySelect onSetFilter={onSetFilter.current} filterBy={filterBy} />
             </section>
         </section>
     )

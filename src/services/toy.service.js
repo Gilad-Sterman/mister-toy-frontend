@@ -6,8 +6,8 @@ import { httpService } from './http.service.js'
 
 const BASE_URL = 'toy/'
 const STORAGE_KEY = 'toyDB'
-const labels = ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 
-'Outdoor', 'Battery Powered']
+const labels = ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle',
+    'Outdoor', 'Battery Powered']
 
 export const toyService = {
     query,
@@ -20,33 +20,6 @@ export const toyService = {
 
 function query(filterBy = {}) {
     return httpService.get(BASE_URL, filterBy)
-    // return storageService.query(STORAGE_KEY)
-        // .then(toys => {
-        //     let toysToreturn = toys
-        //     if (filterBy.txt) {
-        //         const regExp = new RegExp(filterBy.txt, 'i')
-        //         toysToreturn = toysToreturn.filter(toy => regExp.test(toy.name))
-        //     }
-        //     if (filterBy.inStock === 'inStock') {
-        //         toysToreturn = toysToreturn.filter(toy => toy.inStock)
-        //     }
-        //     if (filterBy.inStock === 'notInStock') {
-        //         toysToreturn = toysToreturn.filter(toy => !toy.inStock)
-        //     }
-        //     if (filterBy.sortBy === 'price') {
-        //         toysToreturn = toysToreturn.sort((toy1, toy2) => toy2.price - toy1.price)
-        //     }
-        //     if (filterBy.sortBy === 'createdAt') {
-        //         toysToreturn = toysToreturn.sort((toy1, toy2) => toy2.createdAt - toy1.createdAt)
-        //     }
-        //     if (filterBy.sortBy === 'name') {
-        //         toysToreturn = toysToreturn.sort((toy1, toy2) => {
-        //             if (toy2.name > toy1.name) return -1
-        //             return 1
-        //         })
-        //     }
-        //     return toysToreturn
-        // })
 }
 
 function getById(toyId) {
@@ -55,7 +28,6 @@ function getById(toyId) {
 }
 
 function remove(toyId) {
-    // return Promise.reject('Oh no!')
     return httpService.delete(BASE_URL + toyId)
     return storageService.remove(STORAGE_KEY, toyId)
 }
